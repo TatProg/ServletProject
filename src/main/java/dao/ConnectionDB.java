@@ -8,9 +8,9 @@ public class ConnectionDB {
         Connection connection = null;
         try {
             Class.forName("org.postgresql.Driver");
-            String dbURL = "jdbc:postgresql://localhost:5432/test_db";
+            String dbURL = "jdbc:postgresql://localhost:5432/test_db";      //Add your data and your db name
             connection =
-                    DriverManager.getConnection(dbURL, "postgres", "1");
+                    DriverManager.getConnection(dbURL, "postgres", "12345");
         } catch (SQLException e) {
             e.printStackTrace();
         } catch (ClassNotFoundException e) {
