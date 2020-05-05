@@ -3,14 +3,18 @@ package dao;
 import java.sql.*;
 
 public class ConnectionDB {
+    public static final String driverDB = "org.postgresql.Driver";
+    public static final String urlDB = "jdbc:postgresql://localhost:5432/test_db";
+    public static final String userDB = "postgres";
+    public static final String passwordDB = "12345";
 
     public static Connection getDBConnection() {
         Connection connection = null;
         try {
-            Class.forName("org.postgresql.Driver");
-            String dbURL = "jdbc:postgresql://localhost:5432/test_db";      //Add your data and your db name
+            Class.forName(driverDB);
+            String dbURL = urlDB;
             connection =
-                    DriverManager.getConnection(dbURL, "postgres", "12345");
+                    DriverManager.getConnection(dbURL, userDB, passwordDB);
         } catch (SQLException e) {
             e.printStackTrace();
         } catch (ClassNotFoundException e) {

@@ -11,11 +11,11 @@
     <title>Login</title>
 </head>
 <body>
-<h1>Вход по логину и паролю</h1>
+<h2>Авторизуйтесь</h2>
 <form action="" method="post">
-    <input type="text" name="name"><br>
-    <input type="password" name="password"><br><br>
-    <input type="submit" value="Войти">
+    <input type="text" required placeholder="Login" name="name"><br>
+    <input type="password" required placeholder="Password" name="password"><br><br>
+    <input type="submit" value="Войти"><br><br>
     ${message}
 </form>
 </body>

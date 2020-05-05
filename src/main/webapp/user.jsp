@@ -11,7 +11,7 @@
     <title>Main</title>
 </head>
 <body>
-<h1>Добро пожаловать!</h1><br>
+<h1>Hello ${user.name}</h1><br>
 
 <form action="/setCookie" method="post">
     <label>
@@ -21,7 +21,10 @@
     <input type="submit" value="Отправить">
 </form>
 ${message}
-
+<br><br>
+<a href="/upload">Загрузить файл</a>
+<br><br>
+<a href="/image">Рисунок</a>
 <br><br>
 <a href="/logout">Выйти</a>
 </body>
